@@ -10,6 +10,10 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
 COPY . .
 
-EXPOSE 3100
+# Exposition du port 8000 utilisé par l'application
+EXPOSE 8000
 
-CMD ["gunicorn", "main:app"]
+# Commande pour exécuter l'application lorsqu'un conteneur basé sur cette image est démarré
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+
