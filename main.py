@@ -1,9 +1,7 @@
 import subprocess
 
 import uvicorn
-from flask import Flask
 from starlette.responses import RedirectResponse
-from starlette.templating import Jinja2Templates
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
